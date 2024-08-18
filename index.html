@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f8f8;
+            background-color: #01090b;
             color: #333;
         }
         h1 {
@@ -39,13 +39,189 @@
             text-align: center;
             color: #ff6347;
         }
+        footer {
+            background-color: #de5608;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Media Queries for Responsiveness */
+
+        @media (max-width: 1200px) {
+            nav h1 {
+                font-size: 1.6em;
+            }
+
+            nav ul li {
+                margin-left: 15px;
+            }
+
+            .coming-soon h2 {
+                font-size: 3em;
+            }
+
+            .coming-soon p {
+                font-size: 1.2em;
+            }
+
+            .menu-section {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .coming-soon h2 {
+                font-size: 2.5em;
+            }
+
+            .coming-soon p {
+                font-size: 1em;
+            }
+
+            .menu-section {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            td img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                margin-top: 5px;
+            }
+
+            .coming-soon h2 {
+                font-size: 2em;
+            }
+
+            .coming-soon p {
+                font-size: 0.9em;
+            }
+
+            .menu-section {
+                margin: 5px;
+                padding: 5px;
+            }
+
+            table {
+                font-size: 0.8em;
+            }
+
+            td img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            nav h1 {
+                font-size: 1.4em;
+            }
+
+            nav ul li {
+                margin-top: 5px;
+                font-size: 0.9em;
+            }
+
+            .coming-soon h2 {
+                font-size: 1.8em;
+            }
+
+            .coming-soon p {
+                font-size: 0.8em;
+            }
+
+            .menu-section {
+                margin: 5px;
+                padding: 5px;
+            }
+
+            table {
+                font-size: 0.7em;
+            }
+
+            td img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .coming-soon {
+            text-align: center;
+            padding: 150px 20px;
+            background: url('https://ideogram.ai/assets/progressive-image/balanced/response/vVppPbP4QiixI6tJsI4UFQ') no-repeat center center/cover;
+            color: rgb(255, 255, 255);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coming-soon h2 {
+            font-size: 3.5em;
+            color: white;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .coming-soon p {
+            font-size: 1.5em;
+            animation: fadeInUp 2s ease-in-out;
+        }
     </style>
 </head>
 <body>
     <h1>Chilli Chow Junction Menu</h1>
+    <div class="coming-soon">
+        <h2>We are coming soon!</h2>
+        <p>Get ready to experience the best momos, chowmein, and more at Chilli Chow Junction. Stay tuned!</p>
+    </div>
 
-
-    <h2>Momos</h2>
+    <h2>Momo</h2>
     <table>
         <thead>
             <tr>
@@ -65,7 +241,7 @@
         <tbody>
      
             <tr>
-                <td>Veg Momos</td>
+                <td>Veg Momo</td>
                 <td>₹ 30 / 60</td>
                 <td>₹ 40 / 70</td>
                 <td>₹ 50 / 90</td>
@@ -74,19 +250,19 @@
              
             </tr>
             <tr>
-                <td>Chicken Momos</td>
+                <td>Chicken Momo</td>
                 <td>₹ 40 / 70</td>
                 <td>₹ 50 / 90</td>
                 <td>₹ 70 / 120</td>
-                <td>₹ 70 / 120</td>
+                <td>₹ 80 / 150</td>
              
             </tr>
             <tr>
-                <td>Panner Momos</td>
+                <td>Panner Momo</td>
                 <td>₹ 40 / 70</td>
                 <td>₹ 50 / 90</td>
                 <td>₹ 70 / 120</td>
-                <td>₹ 70 / 120</td>
+                <td>₹ 80 / 150</td>
              
             </tr>
             <tr>
@@ -107,7 +283,7 @@
             </thead>
             <tr>
                 <td>Veg Chowmein</td>
-                <td colspan="8">₹ 40 /860</td>
+                <td colspan="8">₹ 40 /80</td>
         
             </tr>
   
@@ -236,7 +412,7 @@
         </tr>
         <tr>
             <td>Chicken Lollypop Chilly   </td>
-            <td colspan="8">₹ 100 / 200</td>
+            <td colspan="8">₹ 100 / 180</td>
         </tr>
         <tr>
             <td>Chana Chilly   </td>
@@ -420,5 +596,8 @@
         </tr>
       
        </table>
+       <footer>
+        <p>&copy; 2024 Chilli Chow Junction. All rights reserved.</p>
+    </footer>
 </body>
 </html>
